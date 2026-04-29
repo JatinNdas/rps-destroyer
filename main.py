@@ -78,6 +78,6 @@ if __name__ == "__main__":
         # If it's not the last cycle, wait 2 minutes (120 seconds)
         if i < repeats - 1:
             print(f"[!] Cycle {i+1} done. Waiting 120s...")
-            time.sleep(60)
+            time.sleep(5)
 
     print("[+] All repeats finished.")
