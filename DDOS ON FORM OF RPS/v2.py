@@ -27,7 +27,7 @@ async def start_berserk_mode():
     }
 
     try:
-        count_input = input("How many requests to fire in Berserk Mode? ---> ")
+        count_input = 500
         iterations = int(count_input)
     except ValueError:
         print("[!] Invalid number.")
@@ -66,4 +66,18 @@ async def start_berserk_mode():
     print("-" * 30)
 
 if __name__ == "__main__":
-    asyncio.run(start_berserk_mode())
+    # How many times to repeat (e.g., 5 times)
+    repeats = 500 
+    
+    for i in range(repeats):
+        print(f"[*] Cycle {i+1} starting...")
+        
+        # Runs your function
+        asyncio.run(start_berserk_mode())
+        
+        # If it's not the last cycle, wait 2 minutes (120 seconds)
+        if i < repeats - 1:
+            print(f"[!] Cycle {i+1} done. Waiting 120s...")
+            time.sleep(60)
+
+    print("[+] All repeats finished.")
