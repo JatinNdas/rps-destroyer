@@ -27,7 +27,7 @@ async def start_berserk_mode():
     }
 
     try:
-        count_input = 500
+        count_input = 2000
         iterations = int(count_input)
     except ValueError:
         print("[!] Invalid number.")
@@ -67,7 +67,7 @@ async def start_berserk_mode():
 
 if __name__ == "__main__":
     # How many times to repeat (e.g., 5 times)
-    repeats = 500 
+    repeats = 5000 
     
     for i in range(repeats):
         print(f"[*] Cycle {i+1} starting...")
