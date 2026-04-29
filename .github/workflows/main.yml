@@ -2,8 +2,8 @@ name: Vortex Execute
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Fires every 5 minutes
-  workflow_dispatch:      # Allows you to click "Run" manually
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   run-vortex:
@@ -21,4 +21,4 @@ jobs:
         run: pip install aiohttp urllib3
 
       - name: Execute Destroyer
-        run: python main.py
+        run: python -u main.py
