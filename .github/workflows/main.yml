@@ -1,0 +1,24 @@
+name: Vortex Execute
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Fires every 5 minutes
+  workflow_dispatch:      # Allows you to click "Run" manually
+
+jobs:
+  run-vortex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install Libs
+        run: pip install aiohttp urllib3
+
+      - name: Execute Destroyer
+        run: python main.py
